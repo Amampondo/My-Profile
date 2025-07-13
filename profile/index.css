@@ -1,0 +1,49 @@
+body    {
+    
+  background-image: linear-gradient(to bottom right,rgba(137, 207, 240,0.5), white);
+  height: 1000px;
+}
+#person {
+    height:500px;
+    margin-top: 200px;
+}
+.row    {
+    display: flex;
+    margin-top: -100px;
+}
+.body   {
+    flex: 50%;
+    margin: 5px;
+}
+#fullstack {
+    background-image: linear-gradient(to right, rgba(137, 207, 240),  rgba(137, 207, 240),#cf23cf, #eedd44);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-family:cursive;
+    margin-top: 400px;
+    margin-left: 200px;
+    font-size: 50px;
+    text-align: center;
+}
+#name , #about , #projects , #workExperience {
+    font-family: cursive;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+.header {
+    display: flex;
+    height: 300px;
+}
+.headerCol  {
+    flex: 50%;
+}
+.innerRow   {
+    display: flex;
+}
+.innerCol   {
+    flex:33.3%;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
