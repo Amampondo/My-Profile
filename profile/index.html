@@ -2,24 +2,25 @@
 <html>
     <head>
         <link rel="stylesheet" href="index.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Lora">
-        <script src="index.js"></script>
+        <script src="index.js">
+        </script>
     </head>
     <body>
+        <div id="circle"></div>
         <div class="header">
+            <div id="innerCircle"></div>
             <div class="headerCol">
-                <h1 id="name"><strong>Amampondo Mluleki Mkhunyana</strong>
-            </h1>
+                <h1 id="name"><strong>Amampondo Mluleki Mkhunyana</strong></h1>
             </div>
             <div class="headerCol">
                 <div class="innerRow">
-                    <div class="innerCol" onclick="toAbout()">
+                    <div class="innerCol" onclick="toAbout()" onmouseover="enlarge()" onmouseleave="contract()">
                         <h1 id="about">About</h1>
                     </div>
-                    <div class="innerCol">
+                    <div class="innerCol" onclick="toWorkExperience()" onmouseover="enlarge()" onmouseleave="contract()">
                         <h1 id="workExperience">Work Experience</h1>
                     </div>
-                    <div class="innerCol">
+                    <div class="innerCol" onclick="toProjects()" onmouseover="enlarge()" onmouseleave="contract()">
                         <h1 id="projects"><strong>&#60Projects&#62</strong></h1>
                     </div>
                 </div>
@@ -29,7 +30,7 @@
             <div class="column">
                 <img id="person" src="./images/person1.png">
             </div>
-            <div class="column">
+            <div class="column" onmouseover="enlarge()" onmouseleave="contract()" >
                 <h1 id="fullstack">Aspiring FullStack Engineer</h1>
             </div>
         </div>

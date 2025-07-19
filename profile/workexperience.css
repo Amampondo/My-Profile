@@ -1,0 +1,24 @@
+body    {
+    background: linear-gradient(to bottom right,rgba(137, 207, 240,0.5), white);
+    background-repeat: no-repeat;
+    height: 1500px;
+}
+h1{
+    font-family: cursive;
+}
+#stellenbosch   {
+    height: 200px;
+    border-radius: 20px;
+    margin-top: 100px;
+    margin-left: 50px;
+}
+.job    {
+    display: flex;
+}
+.jobCol {
+    flex: 50%;
+    font-family: cursive;
+}
+#description    {
+    margin-top: 50px;
+}
