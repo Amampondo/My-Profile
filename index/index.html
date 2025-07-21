@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <script>
+            var isMenuOpen = false;
+            function dimBackground(){
+                document.getElementById("logoContainer").style.backgroundColor = 'rgba(0,0,0,0.9)'
+                document.getElementById("logoContainer").style.backgroundBlendMode = 'darken';
+                document.getElementById("intro").style.opacity = 0.1;
+                document.getElementById("logo").style.opacity = 0.1;
+                document.getElementById("supported").style.opacity = 0.1;
+                document.getElementById("menu").opacity = 1;
+                document.getElementById("logInContainer").style.opacity = 1;
+            }
+            function undimBackground(){
+                document.getElementById("logoContainer").style.backgroundColor = 'rgba(0,0,0,0)'
+                document.getElementById("logoContainer").style.backgroundBlendMode = 'darken';
+                document.getElementById("logo").style.opacity = 1;
+                document.getElementById("logoContainer").style.opacity = 1;
+                document.getElementById("intro").style.opacity = 1;
+                document.getElementById("supported").style.opacity = 1;
+                document.getElementById("logInContainer").style.opacity = 0;
+            }
+            function openLogIn(){
+                dimBackground();
+                document.getElementById("menu").style.backgroundColor = 'black';
+            }
+            function closeLogIn(){
+                undimBackground();
+                document.getElementById("menu").style.backgroundColor = 'white)';
+            }
+            function toggleMenu(){
+                if(!isMenuOpen){
+                document.getElementById("closedMenu").style.opacity = 0;
+                document.getElementById("openMenu").style.opacity = 1;
+                openLogIn();
+                isMenuOpen = true;
+                }else{
+                document.getElementById("closedMenu").style.opacity = 1;
+                document.getElementById("openMenu").style.opacity = 0;
+                closeLogIn();
+                isMenuOpen = false;
+                }
+            }
+        </script>
+    </head>
+    <body id="body">
+        <div>
+        <div id="home">
+            <div id="logoContainer" >
+                <h1 id="logo" >Grab</h1>
+            </div>
+            </div>
+            <div id="intro">
+                <h4>Order Online</h3>
+                <h2>We Accept <strong>COB</strong>!</h2>
+            </div>
+            <div id="supported">
+                <h1 id="hSupported">Supported Stores</h1>
+                <div class="kfc">
+                    <img src="./images/kfc.jpg">
+                </div>
+                <div class="romans">
+                    <img src="./images/romans.png">
+                </div>
+                <div class="spur">
+                    <img src="./images/spur.png">
+                </div>
+            </div>
+        </div>
+        <div id="logInContainer">
+            <div id="logIn">
+                <h1>Log-In</h1>
+                <hr>
+                <div>
+                    <input id="email" type="email" placeholder="email@sun.ac.za">
+                </div>
+                <div>
+                <input id="password" type="password" placeholder="password">
+                </div>
+                <div id="enter">
+                    Enter
+                </div>
+            </div>
+        </div>
+        <div id="menu" >
+            <img id="closedMenu" src="./images/menu.png" onmousedown="toggleMenu()">
+            <img id="openMenu" src="./images/openMenu.png" style="opacity: 0;" onmousedown="toggleMenu()">
+        </div>
+    </body>
+</html>
